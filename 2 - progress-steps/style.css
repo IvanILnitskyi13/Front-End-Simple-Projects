@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --color-blue: rgb(65, 115, 206);
+  --color-grey: rgb(226, 226, 226);
+  --color-text-grey: rgb(163, 163, 163);
+  --color-white: #fff;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container {
+  width: 40rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.progress-container::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-grey);
+  z-index: -1;
+}
+
+.progress {
+  position: absolute;
+  height: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-blue);
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 10rem;
+  border: 3px solid var(--color-grey);
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--color-text-grey);
+  transition: 0.4s ease;
+}
+
+.btn-container {
+  display: flex;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 1rem 3rem;
+  margin: 5px;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: 0;
+}
+
+.btn:disabled {
+  background-color: var(--color-grey);
+  cursor: not-allowed;
+}
+.btn:active {
+  transform: translateY(2px) scale(0.97);
+}
+
+.active {
+  border-color: var(--color-blue);
+}
