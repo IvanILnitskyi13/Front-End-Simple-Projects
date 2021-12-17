@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+:root {
+  --color-dark-grey: #222;
+  --color-grey: #333;
+  --color-dark-light: #555;
+  --color-white-dark: #fafafa;
+  --color-white: #fff;
+  --color-red-light: #d14d4d;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--color-dark-grey);
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 5rem;
+  background-color: var(--color-white-dark);
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+}
+
+.container-rotate {
+  transform: rotate(-15deg);
+  transform-origin: top left;
+}
+
+.menu-btn-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 0.5s linear;
+}
+
+.btn-rotate {
+  transform: translateX(-50%) translateY(-50%) rotate(-75deg);
+}
+
+.menu-btn {
+  background-color: var(--color-red-light);
+  width: 16rem;
+  height: 16rem;
+  border-radius: 100rem;
+  border: none;
+  position: relative;
+}
+
+.menu-icon {
+  font-size: 2.5rem;
+  color: var(--color-white);
+}
+
+.open {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+}
+
+.close {
+  position: absolute;
+  top: 10rem;
+  left: 3rem;
+}
+
+.content {
+  max-width: 100rem;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 1.6;
+  color: var(--color-dark-grey);
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-dark-light);
+}
+
+.article-content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin: 1.6rem 0;
+  color: var(--color-dark-grey);
+}
+
+.img-title {
+  font-size: 2.1rem;
+  margin: 1.8rem 0;
+}
+
+.article-img {
+  max-width: 100%;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 20rem;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-150%);
+  transition: all 0.7s ease-in-out;
+}
+
+.navigation-show {
+  transform: translateX(0);
+}
+
+.navigation .list {
+  list-style: none;
+  padding-left: 3rem;
+}
+
+.list-item a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.nav-icon {
+  margin-right: 1rem;
+}
