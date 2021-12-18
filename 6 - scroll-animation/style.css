@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --color-grey: #7e7e7e;
+  --color-grey-light: #b9b9b9;
+  --color-white-grey: #fafafa;
+  --color-white: #fff;
+  --color-red: rgb(165, 67, 67);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-white-grey);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 5rem;
+}
+
+.header {
+  font-size: 4rem;
+  margin-bottom: 10rem;
+  color: var(--color-red);
+}
+
+.content-box::before {
+  bottom: 0;
+  content: "";
+  height: 100%;
+  background-color: var(--color-grey-light);
+  left: calc(50% - 1px);
+  position: absolute;
+  top: 0;
+  width: 2px;
+  z-index: 1;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.content-title {
+  font-size: 3rem;
+  line-height: 5rem;
+  color: var(--color-red);
+}
+
+.content-subtitle {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-bottom: 5px;
+  color: var(--color-grey-light);
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
+.content {
+  width: 40rem;
+  font-size: 1.6rem;
+  padding: 3rem;
+  background-color: var(--color-white);
+  box-shadow: 0px 8px 24px 0px var(--color-grey);
+  margin-top: 2rem;
+  transition: transform 1s ease-in-out;
+}
+
+.content:nth-of-type(odd) {
+  transform: translateX(-400%);
+}
+
+.content:nth-of-type(even) {
+  transform: translateX(400%);
+}
+
+.show:nth-of-type(odd) {
+  transform: translateX(-65%);
+}
+
+.show:nth-of-type(even) {
+  transform: translateX(65%);
+}
